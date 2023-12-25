@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-Up to Survey-monkey</title>
+    <link rel="stylesheet" href="Signup.css">
+  
+    
+    <script src="Signup.js"></script>
+    <link rel="shortcut icon" href="development.png" type="image/x-icon" />
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+<script>
+     
+    const firebaseConfig = {
+apiKey: "AIzaSyCzn8PsrEB0qyKstgyYf0Jz_8AUgWIilA8",
+authDomain: "survey-form-32972.firebaseapp.com",
+databaseURL: "https://survey-form-32972-default-rtdb.firebaseio.com",
+projectId: "survey-form-32972",
+storageBucket: "survey-form-32972.appspot.com",
+messagingSenderId: "880994684727",
+appId: "1:880994684727:web:532b66de9049420875d4b2"
+};
+
+
+firebase.initializeApp(firebaseConfig);
+ </script>
+  
+   
+   
+    
+</head>
+
+<body>
+<!-- <form id="signup_form" action="form.html" onsubmit="return valid();" > -->
+<!-- <form id="signup_form" action="Login.html" onclick="return valid();" > -->
+    <div class="progress"></div>
+    <form id="signup_form" action="Login.html" onclick="return valid();" >
+    <div class="main">
+ 
+        <div class="container">
+            <!-- <form id="signup_form" action="Login.html" onclick="return valid();" > -->
+            <h1><b>SIGN-UP</b></h1>
+            <p id="p">it's quick and easy</p>
+            <hr><br>
+
+            <input type="text" name="" id="name" placeholder="     First name" class="input_1"><br>
+            <span style="color:red" id="name_err"></span>
+            <br>
+            <input type="text" name2="" id="name2" placeholder="     Last name.." class="input_1"><br>
+            <span style="color:red" id="name2_err"></span>
+            <br>
+            <input type="text" name="" id="email" placeholder="     Email" class="input"><br>
+            <span style="color:red" id="email_err"></span>
+            <br>
+            <label for="Create Password" class="input_2">Create Password</label><br>
+            <input type="password" id="pass" pass="" placeholder="     New Password..." class="input"><br>
+            <span style="color:red" id="pass_err"></span>
+            <br>
+            <input type="password" id="pass2" pass2="" placeholder="     Confirm Password" class="input"><br>
+            <span style="color:red" id="pass2_err"></span>
+            <br>
+
+            <label for="Birthday" class="input_4">Enter your Birthday</label><br>
+            <select name=" " class="select" id="day">
+                <option value="Select Day">Select Day</option>
+                <script>
+                    for (i = 1; i <= 31; i++) {
+                        document.write("<option value='+i+'>" + i + "</option>")
+                    }
+                </script>
+            </select>
+            <span style="color:red" id="day_err"></span>
+            <select name=" " class="select" id="month">
+                <option value="Select Month">Select Month</option>
+                <script>
+                    for (i = 1; i <= 12; i++) {
+                        document.write("<option value='+i+'>" + i + "</option>")
+                    }
+                </script>
+            </select>
+            <span style="color:red" id="month_err"></span>
+            <select name=" " class="select" id="year">
+                <option value="Select Year">Select Year</option>
+                <script>
+                    for (i = 1990; i <= 2023; i++) {
+                        document.write("<option value='+i+'>" + i + "</option>")
+                    }
+                </script>
+            </select><BR>
+            <span style="color:red" id="year_err"></span><br>
+            <br><br>
+            <p>by clicking Sign up , you agree to the <a href="Terms.html">Terms</a>. Learn how we collect,use your dataand how we use cookies and similar technology in <a href="Policy.html">Privacy Policy</a> You may receive SMS notification from us.</p>
+            <br>
+            <!-- <label> <button class="b"><a href="Login.html"><b>SIGN UP</b></a></button></label><br> -->
+            <button <input type="submit">SIGN UP</a></button>
+            <p id="message"></p>
+            <a href="Login.html"><button>Login</button></a>
+        </div>
+       
+    </div>
+    </form>
+
+
+        
+</body>
+</html>

@@ -1,0 +1,101 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+body
+{
+    background-image: url(background.webp);}
+.main
+{
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.progress
+{
+    background-color: #FF6969;
+    width: 0px;
+    height: 2px;
+    animation: load 5s ease-in-out 0s 1;
+}
+@keyframes load
+{
+    from
+    {
+        width: 0px;
+    }
+    to
+    {
+        width: 100vw;
+    }
+}
+.container
+{
+    margin: 50px;
+    background-color: #454545;
+    color: white;
+    height: 500px;
+    width: 400px;
+    border-radius: 5px;
+    text-align: center;
+}
+input
+{
+    width: 80%;
+    height: 32px;
+    border-radius: 10px;
+}
+button
+{
+    width:80%;
+    height: 32px;
+    border-radius: 50px;
+    transition-property: all;
+    transition-duration: .5s;
+}
+button:hover
+{
+    width: 85%;
+    height: 35px;
+}
+.fb
+{
+    background-color:#FF6969;
+    color: white;
+}
+.fb_1
+{
+    background-color:blue;
+    color: white;
+}
+button:hover
+{
+    cursor: pointer;
+}
+a
+{
+    color: #FF6969;
+}
+button a
+{
+    color: rgb(12, 132, 223);
+    text-decoration: none;
+}
+.qq
+{
+    color: rgb(12, 132, 223);
+    text-decoration: none;
+}
+.qq:hover{
+    background-color: rgb(12, 132, 223);
+    color:white;
+    transition: 0.3s;
+
+}
+.qq:hover .qa{
+    color:white;
+    transition: 0.3s;
+}

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Survey Monkey</title>
+        <meta name="description" content="this is an website providing platfrom for you to conduct different surveys for different type of data and use it for improving sales,helping people and improving an product and lot of other things providing fast and innovitaive solution">
+        <meta name="keywords" content="amazingsurveytool dataanalytics largestsurveyplatform survey surveyform">
+        <meta name="author" content="akashsuri akhil akashdeep akashchaduary">
+        <link rel="stylesheet" href="index.css">
+        <link rel="shortcut icon" href="development.png" type="image/x-icon">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@500&family=Noto+Sans:wght@400;900&display=swap" rel="stylesheet">
+    </head>
+    
+    <body>
+        <header>
+            <nav>
+                <img src="https://prod.smassets.net/assets/website/2.216.0/images/logo-surveymonkey.svg">
+                <ul>
+                    <li> <a href="homepage.html">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">contact</a></li>
+                    <li><a href="#">product</a></li>
+                </ul>
+                <div class="login">
+                    <button style="border:none; opacity:100%;background-color:#fbafc2"><a href="login.html">log in</a></button>
+                    <button style="background-color:#FFB84C;"><a href="Signup.html">sign up</a></button>
+                </div>
+            </nav>
+        </header>
+        <div class="containgcenter">
+            <span class="typedmessage"></span>
+            <p>A global leader in survey software. 20 million questions answered daily.</p>
+            <button id="mypopup" onclick="openPopup()">get started</button>
+        </div>  
+        <div id="myPopup" class="popup">
+            <div class="popup-content">
+                <h2>Sign-Up / Login</h2>
+                <p>SignUp / Login to your surveyour's account</p>
+                <div>
+                    <div class="centered">
+                        <h2>Already a member</h2>
+                        <button onclick="login()">Login</button>
+                    </div>
+                    <div class="centered">
+                        <h2>Not a member ?</h2>
+                        <button onclick="signup()">Sign-Up</button></div>
+                    </div>
+                <button onclick="closePopup()">Close</button>
+            </div>
+        </div>
+        
+        <script>
+            function login(){
+                location.assign("Login.html");
+            }
+            function signup(){
+                location.assign("Signup.html");
+            }
+            function openPopup() {
+                var popup = document.getElementById("myPopup");
+                popup.style.display = "block"; // Show the popup
+            }
+
+            function closePopup() {
+                var popup = document.getElementById("myPopup");
+                popup.style.display = "none"; // Hide the popup
+            }
+        </script>
+        
+        <div class="smallheading">
+            <p>who is your service audience ?</p>
+            <div class="smallflex">
+                <button>employees</button>
+                <button>customers</button>
+                <button>target market</button>
+                <button>others</button>
+            </div> 
+        </div>
+        
+        <div class="picturegrid">
+            <div class="item1 extend"></div>
+            <div class="item2"></div>
+            <div class="item3"></div>
+            <div class="item4"></div>
+            <div class="item5"></div>
+        </div>
+        
+        <div class="smallheading2">
+            <p>Join more than 17 million active users worldwide</p>
+            <div class="smallflex">
+                <img src="https://prod.smassets.net/assets/content/sm/Allbirds-slate.png" alt="">
+                <img src="https://prod.smassets.net/assets/content/sm/Tweezerman-logo-2x.png" alt="">
+                <img src="https://prod.smassets.net/assets/content/sm/Adobe-logo-2x.png" alt="">
+                <img src="https://prod.smassets.net/assets/content/sm/Verizon-logo-2x.png" alt="">
+                <img src="https://prod.smassets.net/assets/content/sm/sephora-logo.png" alt="">
+            </div>
+        </div>
+        
+        <div class="amazing">
+            <p>Looking for targeted responses to your surveys?<br/>
+                Get the responses you need in minutes with SurveyMonkey<br/> 
+                Audience, our trusted panel of more than 175 million respondents<br /> 
+                from across the globe.<br />
+            </p>
+            <button >learn more</button>
+        </div>
+        
+        <div class="center"><p><span class="capitalize">Tools that spark business breakthroughs</span><br>
+            Discover specialized toolkits designed for your role and industry.</p>
+        </div>
+            
+        <div class="final-flex">
+            <div class="flexed">
+                <div class="photo"></div>
+                <div class="paragraph"><h2>Customer support</h2>
+                    <p> Provide better customer experiences while keeping your teams engaged.</p>
+                </div>
+            </div>
+            <div class="flexed">
+                <div class="photo photo2"></div>
+                <div class="paragraph">
+                    <h2>Human resources</h2>
+                    <p> Retain your workforce by fostering a world-class employee experience.</p>
+                </div>
+            </div>
+            <div class="flexed">
+                <div class="photo photo3"></div>
+                <div class="paragraph">
+                    <h2>Product management</h2>
+                    <p>Build products that drive impact and offer a strong product-market fit.</p>
+                </div>
+            </div>
+        </div>
+            
+        <div class="center">
+            <p><span class="capitalize">Still curious?</span><br />
+            Explore these additional resources to help you launch successful survey projects.</p>
+        </div>
+            
+        <div class="final-flex">
+            <div class="flexed">
+                <div class="photo photo4"></div>
+                <div class="paragraph">
+                    <h3>Success Stories</h3>
+                    <p>Read about our customers, explore our webinars, and get guides on collecting feedback in your industry.</p>
+                </div>
+            </div>
+            <div class="flexed">
+                <div class="photo photo5"></div>
+                <div class="paragraph">
+                    <h3>Blog</h3>
+                    <p> Get tips on how to create better surveys, hear the latest product news, or check out our signature research.</p>
+                </div>
+            </div>
+            <div class="flexed">
+                <div class="photo photo6"></div>
+                <div class="paragraph">
+                    <h3>Help Center</h3>
+                    <p>Access tutorials on how features work, learn more about billing, contact Customer Support, and more.</p>
+                </div>
+            </div>
+        </div>
+            
+        <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+        <script>
+            var typed=new Typed(".typedmessage",{
+                strings: ["What do you want to know?","Are my employees happy at work?","Will my product be a success or a flop?","Are my customers actually satisfied?","Do people like attending my events?"]  ,
+                typespeed:125,
+                backspeed:125,
+                loop:true 
+            })
+        </script> 
+    </body>
+</html>

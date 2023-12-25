@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>survey</title>
+    <meta
+      name="description"
+      content="this is an webpage about an survey from from customer regarding web development 
+    service provided in order to collect data and compile result to help customer solve the problem in the ,ost effiecent way"
+    />
+    <meta
+      name="keywords"
+      content="survey web-development development HTML CSS"
+    />
+    <link rel="shortcut icon" href="development.png" type="image/x-icon" />
+    <link rel="stylesheet" href="form.css" />
+    <script src="form.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script>
+     
+      const firebaseConfig = {
+  apiKey: "AIzaSyCzn8PsrEB0qyKstgyYf0Jz_8AUgWIilA8",
+  authDomain: "survey-form-32972.firebaseapp.com",
+  databaseURL: "https://survey-form-32972-default-rtdb.firebaseio.com",
+  projectId: "survey-form-32972",
+  storageBucket: "survey-form-32972.appspot.com",
+  messagingSenderId: "880994684727",
+  appId: "1:880994684727:web:532b66de9049420875d4b2"
+  };
+  
+  
+  firebase.initializeApp(firebaseConfig);
+   </script>
+  </head>
+  <body>
+
+    <div class="navbox">
+      <nav>
+        <ul>
+          <li class="li4"><a href="index.html" class="li_5">HOME</a></li>
+          <li class="li4">CONTACT
+            <ul>
+            <a href="https://www.facebook.com/"><li class="drop">Facebook</li></a>
+            <br>
+            <a href="https://www.instagram.com/?__coig_restricted=1"><li class="drop">Instagram</li></a>
+            <br>
+            <a href="https://twitter.com/?lang=en-in"><li class="drop">Twitter</li></a>
+            </ul>
+          </li>
+          <li class="li4"><a href="Login.html" class="li_5">LOGOUT</a></li>
+        </ul>
+        <!-- <div class="align">
+          <img class="center" src="Checklist-amico.svg" alt="small logo" />
+        </div> -->
+      </nav>
+    </div>
+    <div class="photo"></div>
+    <div class="up">
+      <h1 class="aligned" style="margin: 0">
+        <b>SURVEY FORM</b>
+      </h1>
+      <div class="intial">
+        <label for="name" class="label">NAME</label><br />
+        <input
+          type="text"
+          name="name"
+          id="name"
+          placeholder="enter your name"
+          class="label_input"
+        /><br />
+        <label for="email" class="label">EMAIL</label><br />
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="enter your email"
+          class="label_input"
+        /><br />
+        <label for="age" class="label">AGE</label><br />
+        <input
+          type="number"
+          min="0"
+          id="age"
+          name="age"
+          placeholder="enter the age"
+          class="label_input"
+        /><br />
+      </div>
+      <div class="intial">
+        <label class="label">which platfrom do you use?</label><br />
+        <div class="left">
+          <label for="windows" class="options">WINDOWS</label><br />
+          <label for="MAC-OS" class="options">MAC-OS</label><br />
+          <label for="LINUX" class="options">LINUX</label><br />
+          <label for="ANY-OTHER" class="options">ANY OTHER</label><br />
+        </div>
+        <div class="right">
+          <input
+            type="radio"
+            name="software"
+            id="windows"
+            value="windows"
+            class="options2"
+          /><br />
+          <input
+            type="radio"
+            name="software"
+            id="MAC-OS"
+            value="MAC-OS"
+            class="options2"
+          /><br />
+          <input
+            type="radio"
+            name="software"
+            id="LINUX"
+            value="LINUX"
+            class="options2"
+          /><br />
+          <input
+            type="radio"
+            name="software"
+            id="ANY-OTHER"
+            value="ANY-OTHER"
+            class="options2"
+          /><br />
+        </div>
+      </div>
+      <div class="intial" style="height: 300px; margin-top: -20px">
+        <label class="label label2"
+          >HOW DID YOU COME TO KNOW ABOUT OUR SOFTWARE</label
+        ><br />
+        <div class="left">
+          <label for="emailed" class="options">EMAIL</label><br />
+          <label for="wordsofmouth" class="options">BY WORD OF MOUTH</label
+          ><br />
+          <label for="search" class="options">GOOGLE SEARCH</label><br />
+          <label for="socialmedia" class="options">Social Media</label><br />
+          <label for="ADS" class="options">ADS</label><br />
+        </div>
+        <div class="right" style="padding-top: 0">
+          <input
+            type="checkbox"
+            name="our-software"
+            value="email"
+            id="emailed"
+            class="options2"
+            style="height: 25px; width: 25px"
+          /><br />
+          <input
+            type="checkbox"
+            name="our-software"
+            value="WORD OF MOUTH"
+            id="wordsofmouth"
+            class="options2"
+            style="height: 25px; width: 25px"
+          /><br />
+          <input
+            type="checkbox"
+            name="our-software"
+            value="search"
+            id="search"
+            class="options2"
+            style="height: 25px; width: 25px"
+          /><br />
+          <input
+            type="checkbox"
+            name="our-software"
+            value="socialmedia"
+            id="socialmedia"
+            class="options2"
+            style="height: 25px; width: 25px"
+          /><br />
+          <input
+            type="checkbox"
+            name="our-software"
+            id="ADS"
+            value="ADS"
+            class="options2"
+            style="height: 25px; width: 25px"
+          /><br />
+        </div>
+      </div>
+      <div class="small">
+        <label class="label">How would you rate the ease of navigation</label
+        ><br />
+        <ul>
+          <li class="options li2">
+            <label for="1" class>1</label>
+            <input type="radio" name="navigation" value="1" id="1" />
+          </li>
+          <li class="options li2">
+            <label for="2">2</label>
+            <input type="radio" name="navigation" value="2" id="2" />
+          </li>
+          <li class="options li2">
+            <label for="3">3</label>
+            <input type="radio" name="navigation" value="3" id="3" />
+          </li>
+          <li class="options li2">
+            <label for="4">4</label>
+            <input type="radio" name="navigation" value="4" id="4" />
+          </li>
+          <li class="options li2">
+            <label for="5">5</label>
+            <input type="radio" name="navigation" value="5" id="5" />
+          </li>
+        </ul>
+        <br />
+      </div>
+      <div class="small">
+        <label class="label">How would you rate the user Friendliness?</label
+        ><br />
+        <ul>
+          <li class="options li2">
+            <label for="1">1</label>
+            <input type="radio" name="friendliness" value="1" id="1" />
+          </li>
+          <li class="options li2">
+            <label for="2">2</label>
+            <input type="radio" name="friendliness" value="2" id="2" />
+          </li>
+          <li class="options li2">
+            <label for="3">3</label>
+            <input type="radio" name="friendliness" value="3" id="3" />
+          </li>
+          <li class="options li2">
+            <label for="4">4</label>
+            <input type="radio" name="friendliness" value="4" id="4" />
+          </li>
+          <li class="options li2">
+            <label for="5">5</label>
+            <input type="radio" name="friendliness" value="5" id="5" /><br />
+          </li>
+        </ul>
+        <br />
+      </div>
+      <div class="small">
+        <label class="label">How would rate the U.I</label><br />
+        <ul>
+          <li class="options li2">
+            <label for="1">1</label>
+            <input type="radio" name="u-i" value="1" id="1" />
+          </li>
+          <li class="options li2">
+            <label for="2">2</label>
+            <input type="radio" name="u-i" value="2" id="2" />
+          </li>
+          <li class="options li2">
+            <label for="3">3</label> 
+            <input type="radio" name="u-i" value="3" id="3" />
+          </li>
+          <li class="options li2">
+            <label for="4">4</label>
+            <input type="radio" name="u-i" value="4" id="4" />
+          </li>
+          <li class="options li2">
+            <label for="5">5</label>
+            <input type="radio" name="u-i" value="5" id="5" />
+          </li>
+        </ul>
+        <br />
+      </div>
+      <div class="small">
+        <label class="label">How would rate the functionallity?</label><br />
+        <ul>
+          <li class="options li2">
+            <label for="1">1</label>
+            <input type="radio" name="functionallity" value="1" id="1" />
+          </li>
+          <li class="options li2">
+            <label for="2">2</label>
+            <input type="radio" name="functionallity" value="2" id="2" />
+          </li>
+          <li class="options li2">
+            <label for="3">3</label>
+            <input type="radio" name="functionallity" value="3" id="3" />
+          </li>
+          <li class="options li2">
+            <label for="4">4</label>
+            <input type="radio" name="functionallity" value="4" id="4" />
+          </li>
+          <li class="options li2">
+            <label for="5">5</label>
+            <input type="radio" name="functionallity" value="5" id="5" />
+          </li>
+        </ul>
+        <br />
+      </div>
+      <div class="small2">
+        <label for="comment" class="label" >ENTER THINGS YOU LIKED ABOUT SOFTWAERE</label><br />
+        <textarea name="comment" id="commnet"  class="label_input2" placeholder="enter text here"></textarea><br />
+    </div>
+    <div class="small2">
+    <label for="backlogs" class="label">ANY SPECIFIC BACKLOGS ABOUT THE PRODUCT?</label
+      ><br />
+      <textarea name="backlogs" id="backlogs" class="label_input2" placeholder="enter text here"></textarea
+      ><br />
+    </div>
+    <div class="small2">
+        <label for="glitches" class="label">ANY GLITCHES ENCOUNTERED<br />WHILE USING THE APPLICATION</label
+      ><br />
+      <textarea name="glitches" id="glitches" class="label_input2" placeholder="enter text here"></textarea
+      ><br />
+    </div>
+    <div class="small2">
+        <label for="positive" class="label">PLEASE LET US KNOW ANY<br/>POSITIVE/NEGATIVE COMMENTS</label
+      ><br />
+      <textarea name="positive" id="positive" class="label_input2" placeholder="enter text here"></textarea
+      ><br />
+    </div>  
+    <div class="last">
+        <button type="reset" value="reset" id="reset" onclick="redrict()">Rate Us</button>
+        <button onclick="storeFormData();abc()" id="sumbit">Save</button><br>
+        <script>
+          function abc(){
+            alert("Submitted Successfully");
+          }
+          
+        </script>
+        <p is="message"></p>
+        <!-- <button type="sumbit" value="sumbit" id="sumbit"><a href="thanks.html" class="li_5" id="sub">SUMBIT</a></button> -->
+    </div>
+    </div>
+    <script>
+      function redrict(){
+        window.location.href="thanks.html";
+      }
+    </script>
+
+  </body>
+</html>

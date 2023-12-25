@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login to survey-Monkey</title>
+    <link rel="stylesheet" href="Login.css">
+    <!-- Add these script tags before your login.js script -->
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+<script>
+     
+    const firebaseConfig = {
+apiKey: "AIzaSyCzn8PsrEB0qyKstgyYf0Jz_8AUgWIilA8",
+authDomain: "survey-form-32972.firebaseapp.com",
+databaseURL: "https://survey-form-32972-default-rtdb.firebaseio.com",
+projectId: "survey-form-32972",
+storageBucket: "survey-form-32972.appspot.com",
+messagingSenderId: "880994684727",
+appId: "1:880994684727:web:532b66de9049420875d4b2"
+};
+
+
+firebase.initializeApp(firebaseConfig);
+ </script>
+<!-- Your login.js script here -->
+<script src="Login.js"></script>
+
+    <!-- <script src="login.js"></script> -->
+    <link rel="shortcut icon" href="development.png" type="image/x-icon" />
+
+</head>
+<body>
+<form action="form.html" onsubmit="return valid();">
+    <div class="progress"></div>
+    <div class="main">
+        <div class="container">
+            <br><h2>Login</h2><br>
+            <input type="text" email="" placeholder="     Email" id="email"><br>
+            <span style="color:red" id="email_err"></span>
+            <br><br>
+            <input type="password" pass="" placeholder="     Password" id="pass"><br>
+            <span style="color:red" id="pass_err"></span>
+            <br>
+            <a href="">Forgot Password?</a><br><br>
+            <button class="fb"><a href="form.html" <input type="submit" onsubmit="valid()">Login</a></button><br>
+            <p id="message"></p>
+            Don't have an account? <a href="Signup.html">Sign Up</a><br>
+            <br><hr><br>
+            <button class="qq" ><a class="qa" href="https://www.facebook.com/login/" >Login with Facebook</a></button>
+            <br><br>
+            <button><a href="https://accounts.google.com/v3/signin/identifier?dsh=S755207497%3A1684736164381641&ifkv=Af_xneEpHV73N-uonCdwtkk0clS3W3sHTMmVGhzBpeLQXgIdVO6SUkHmk2-M0ohpMOeVJQjiXn9q0w&flowName=GlifWebSignIn&flowEntry=ServiceLogin" style=" color: black; text-decoration: none;">Login with Google</a></button>
+        </div>     
+    </div>
+</form>
+</body>
+</html>
